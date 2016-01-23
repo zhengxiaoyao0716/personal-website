@@ -4,12 +4,12 @@ function init_pagination() {
   page_num = 1 + parseInt((items.length - 1) / 6);
   for (index = 2; index <= page_num; index++)
   {
-    li_str += '<li><a href=#guid>' + index + '</a></li>';
+    li_str += '<li><a href=#guide>' + index + '</a></li>';
   }
   $(".pagination").append(
-    '<li class="disabled"><a href=#guid>&laquo;</a></li>\
-    <li class="active"><a href=#guid>1</a></li>'
-    + li_str + '<li><a href=#guid>&raquo;</a></li>'
+    '<li class="disabled"><a href=#guide>&laquo;</a></li>\
+    <li class="active"><a href=#guide>1</a></li>'
+    + li_str + '<li><a href=#guide>&raquo;</a></li>'
   );
   var choosed_item;
   choosed_item = $(".pagination").find(".active");
