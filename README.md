@@ -9,4 +9,5 @@ My website, 我的个人网站
 ##另外，由于界面用bootstrap完成，并严格遵守其约定
 ####所以基本不用考虑移动端与PC端分辨率适配的问题
 ##预览效果（也就是我的个人网站访问地址）：
-####xiaoyao.zheng0716.com
+####http://xiaoyao.zheng0716.com
+####http://zhengxiaoyao0716.github.io/personal-website
