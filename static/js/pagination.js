@@ -1,49 +1,46 @@
-function init_pagination() {
-  var index, page_num;
-  var li_str = '';
-  page_num = 1 + parseInt((items.length - 1) / 6);
-  for (index = 2; index <= page_num; index++)
-  {
-    li_str += '<li><a href=#guide>' + index + '</a></li>';
-  }
-  $(".pagination").append(
-    '<li class="disabled"><a href=#guide>&laquo;</a></li>\
-    <li class="active"><a href=#guide>1</a></li>'
-    + li_str + '<li><a href=#guide>&raquo;</a></li>'
-  );
-  var choosed_item;
-  choosed_item = $(".pagination").find(".active");
-  $(".pagination").children().click(function() {
-    $(".contain").empty();
-    choose_page = $(this).text();
-    $(".pagination").children().first().removeAttr("class");
-    $(".pagination").children().last().removeAttr("class");
-    switch (choose_page)
+function initPagination(pageNum, func) {
+    var li_str = '';
+    for (var index = 2; index <= pageNum; index++)
     {
-      case "«":
-      case "1":
-        choosed_item.removeAttr("class");
-        choosed_item = $(".pagination").children().first();
-        choosed_item.attr("class", "disabled");
-        choosed_item = choosed_item.next();
-        choosed_item.attr("class", "active");
-        read_rss(1);
-        break;
-      case "»":
-      case "" + page_num:
-        choosed_item.removeAttr("class");
-        choosed_item = $(".pagination").children().last();
-        choosed_item.attr("class", "disabled");
-        choosed_item = choosed_item.prev();
-        choosed_item.attr("class", "active");
-        read_rss(page_num);
-        break;
-      default:
-        choosed_item.removeAttr("class");
-        choosed_item = $(this);
-        choosed_item.attr("class", "active");
-        read_rss(choose_page);
+        li_str += '<li><a href=#guide>' + index + '</a></li>';
     }
-  });
-  read_rss(1);
+    $(".pagination").append(
+        '<li class="disabled"><a href=#guide>&laquo;</a></li>\
+        <li class="active"><a href=#guide>1</a></li>'
+        + li_str + '<li><a href=#guide>&raquo;</a></li>'
+    );
+    var choosedItem = $(".pagination").find(".active");
+    $(".pagination").children().click(function() {
+        $(".contain").empty();
+        choose_page = $(this).text();
+        $(".pagination").children().first().removeAttr("class");
+        $(".pagination").children().last().removeAttr("class");
+        switch (choose_page)
+        {
+        case "«":
+        case "1":
+            choosedItem.removeAttr("class");
+            choosedItem = $(".pagination").children().first();
+            choosedItem.attr("class", "disabled");
+            choosedItem = choosedItem.next();
+            choosedItem.attr("class", "active");
+            func(1);
+            break;
+        case "»":
+        case String(pageNum):
+            choosedItem.removeAttr("class");
+            choosedItem = $(".pagination").children().last();
+            choosedItem.attr("class", "disabled");
+            choosedItem = choosedItem.prev();
+            choosedItem.attr("class", "active");
+            func(pageNum);
+            break;
+        default:
+            choosedItem.removeAttr("class");
+            choosedItem = $(this);
+            choosedItem.attr("class", "active");
+            func(choose_page);
+        }
+    });
+    func(1);
 }

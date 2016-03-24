@@ -11,9 +11,10 @@
     <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- 页面控制 -->
-    <script src="./static/js/tab_change.js"></script>
     <script src="./static/js/read_rss.js"></script>
+    <script src="./static/js/read_json.js"></script>
     <script src="./static/js/pagination.js"></script>
+    <script src="./static/js/tab_change.js"></script>
     <!-- 调色盘，http://www.materialpalette.com/light-blue/yellow -->
     <link href="./static/css/palette.css" rel="stylesheet"/>
 </head>
@@ -69,14 +70,17 @@
         <div class="row-fluid">
             <div class="col-sm-12">
                 <ul class="nav nav-tabs">
-                    <li id="main_sites">
-                        <a href=#guide onclick="main_sites()">主站链接</a>
+                    <li id="mainSites">
+                        <a href=#guide onclick="mainSites();">主站链接</a>
                     </li>
-                    <li id="last_news">
-                        <a href=#guide onclick="last_news()">最新动态</a>
+                    <li id="lastNews">
+                        <a href=#guide onclick="lastNews();">最新动态</a>
                     </li>
-                    <li id="san_jie_zhi">
-                        <a href=#guide onclick="san_jie_zhi()">三界志</a>
+                    <li id="sanJieZhi">
+                        <a href=#guide onclick="sanJieZhi();">三界志</a>
+                    </li>
+                    <li id="projectGallery">
+                        <a href=#guide onclick="projectGallery();">项目展示</a>
                     </li>
                     <li class="disabled">
                         <a href=#guide>--</a>
