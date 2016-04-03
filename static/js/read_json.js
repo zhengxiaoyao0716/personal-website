@@ -20,7 +20,7 @@ var readJson = (function () {
     return function (callback, filterStr) {
         if (!jsonItems) {
             $('#waiting').modal('show');
-            $.getJSON("http://os.zheng0716.com/static/json/projects.json", function(json) {
+            $.getJSON("http://public.zheng0716.com/static/json/projects.json", function(json) {
                 console.log(json);
                 jsonItems = json;
                 $('#waiting').modal('hide');
