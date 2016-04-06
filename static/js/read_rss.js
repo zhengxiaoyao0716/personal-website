@@ -23,7 +23,7 @@ var readRss = (function () {
             var contain = item.description.substring(0, item.description.lastIndexOf('<a'));
             contain = contain.substring(0, contain.lastIndexOf('<a'));
             $(".contain").append(
-                '<li class="col-sm-4"><div class="thumbnail caption"  style="height:300px; overflow:hidden; text-overflow:ellipsis">'
+                '<li class="col-sm-4"><div class="thumbnail caption"  style="height:300px; overflow:hidden; text-overflow:ellipsis;">'
                 + '<a href="' + item.link + '" target="_blank"><h3>' + item.title + '</h3></a>'
                 + '<small class="light-primary-color">' + item.pubDate + '</small>'
                 + '<div>' + contain + '</div>'

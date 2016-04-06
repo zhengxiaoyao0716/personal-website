@@ -7,7 +7,7 @@ var readJson = (function () {
         {
             var item = items[index];
             $(".contain").append(
-                '<li class="col-sm-4"><a href="' + item.link + '" target="_blank"><div class="thumbnail caption" style="height:300px; overflow:hidden; text-overflow:ellipsis">'
+                '<li class="col-sm-4"><a href="' + item.link + '" target="_blank"><div class="thumbnail caption" style="height:300px; overflow:hidden; text-overflow:ellipsis;">'
                 + '<img src=' + item.image + ' class="img-responsive"/>'
                 + '<div align="center"><h3>' + item.title + '</h3>'
                 + '<small class="light-primary-color">' + item.date + '</small></div>'
