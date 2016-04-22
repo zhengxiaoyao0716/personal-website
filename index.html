@@ -56,8 +56,7 @@
                     ︻<br />逍<br />遥<br />居<br />︼
                 </div>
                 <div  class="row" align="center">
-                    <div class="col-sm-12" style="color: white; position: relative;">
-                        <img src="./static/image/feihe.png" class="img-responsive" style="position: absolute; bottom: 0px; right: 0px;"/>
+                    <div class="col-sm-12 petRoom" style="color: white; position: relative;">
                         <div style="font-size: 1.5em;">
                             爱冷剑，怜悲箫，月下狼孤啸；<br />
                             轻点画，慢勾描，云中人逍遥。<br />
@@ -144,5 +143,26 @@
             </div><!-- /.modal -->
         </div>
     </div>
-
+    
+    <!-- 宠物 -->
+    <script src="http://zhengxiaoyao0716.github.io/OwOpet/js/owopet.js"></script>
+    <script>
+        OwOpet.info = {
+            "name": "OwO",
+            "gender": "Boy",
+            "birth": "2016/3/6",
+            "master": "zhengxiaoya0716",
+            "home": "http://xiaoyao.zheng0716.com"
+        };
+        OwOpet.config.image = "./static/image/feihe.png";
+        OwOpet.config.cursor = "simple";
+        OwOpet.config.parent = document.getElementsByClassName("petRoom")[0];
+        OwOpet.config.position = "absolute";
+        OwOpet.config.coord = [1, 1, 99];
+        OwOpet.config.axis = [1, 1];
+        
+        OwOpet.locale.chinese();
+        setTimeout(OwOpet.init, 100);
+    </script>
+    
 </body>
