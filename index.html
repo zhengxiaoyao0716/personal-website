@@ -147,6 +147,8 @@
     <!-- 宠物 -->
     <script src="http://zhengxiaoyao0716.github.io/OwOpet/js/owopet.js"></script>
     <script>
+        OwOpet.locale.chinese();
+        
         OwOpet.info = {
             "name": "OwO",
             "gender": "Boy",
@@ -161,7 +163,7 @@
         OwOpet.config.coord = [1, 1, 99];
         OwOpet.config.axis = [1, 1];
         
-        OwOpet.locale.chinese();
+        OwOpet.chat.config.defaultWords = ["爱冷剑，怜悲箫，月下狼孤啸；<br />轻点画，慢勾描，云中人逍遥。"];
         setTimeout(OwOpet.init, 100);
     </script>
     
