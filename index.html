@@ -20,7 +20,7 @@
     <div class="container-fluid" style="background: #0288D1;"><br /></div>
     
     <!-- Banner -->
-    <div class="container-fluid" style="background: #03A9F4 url(./static/image/banner_bg.png); position: relative;">
+    <div class="container-fluid petRoom" style="background: #03A9F4 url(./static/image/banner_bg.png); position: relative;">
         <img style="position: absolute; left: 0px;" src="./static/image/banner_corner.png"/>
         <img style="position: absolute; left: 0px; bottom: 0px;
             -webkit-transform:rotate(-90deg);
@@ -56,7 +56,7 @@
                     ︻<br />逍<br />遥<br />居<br />︼
                 </div>
                 <div  class="row" align="center">
-                    <div class="col-sm-12 petRoom" style="color: white; position: relative;">
+                    <div class="col-sm-12" style="color: white; position: relative;">
                         <div style="font-size: 1.5em;">
                             爱冷剑，怜悲箫，月下狼孤啸；<br />
                             轻点画，慢勾描，云中人逍遥。<br />
@@ -67,7 +67,15 @@
                 </div>
             </div>
             <div class="col-sm-2" align="center">
-                <embed src="http://www.xiami.com/widget/49017327_1771737866,_200_250_03A9F4_f9f9f9_0/multiPlayer.swf" type="application/x-shockwave-flash" width="200" height="250" wmode="opaque"></embed>
+                <embed src="http://www.xiami.com/widget/49017327_1771737866,_180_250_03A9F4_f9f9f9_1/multiPlayer.swf" type="application/x-shockwave-flash" width="400" height="300" wmode="opaque"></embed>
+                <script>
+                    $(function () {
+                        setTimeout(function () {
+                            $("embed")[0].width = "180";
+                            $("embed")[0].height = "250";
+                        }, 100);
+                    });
+                </script>
             </div>
         </div>
         <div class="row-fluid"><div class="col-sm-12"><br /><br /></div></div>
@@ -160,10 +168,21 @@
         OwOpet.config.cursor = "simple";
         OwOpet.config.parent = document.getElementsByClassName("petRoom")[0];
         OwOpet.config.position = "absolute";
-        OwOpet.config.coord = [1, 1, 99];
+        OwOpet.config.coord = [1, 0.9, 1];
         OwOpet.config.axis = [1, 1];
         
+        OwOpet.anim.config.type = 1;
+        var frameArray = [];
+        var imgNum;
+        for (imgNum = 1; imgNum < 30; imgNum++) {
+            frameArray.push("./static/image/feihe/" + imgNum + ".png");
+        }
+        OwOpet.anim.config.queue = [
+            {"frames": frameArray, "delay": 1, "repeat": 8, "offset": [-8, -1.5, -0.3]}
+        ]
+        
         OwOpet.chat.config.defaultWords = ["爱冷剑，怜悲箫，月下狼孤啸；<br />轻点画，慢勾描，云中人逍遥。"];
+        
         setTimeout(OwOpet.init, 100);
     </script>
     
