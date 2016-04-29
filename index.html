@@ -20,7 +20,7 @@
     <div class="container-fluid" style="background: #0288D1;"><br /></div>
     
     <!-- Banner -->
-    <div class="container-fluid petRoom" style="background: #03A9F4 url(./static/image/banner_bg.png); position: relative;">
+    <div id="owoRoom" class="container-fluid" style="background: #03A9F4 url(./static/image/banner_bg.png); position: relative;">
         <img style="position: absolute; left: 0px;" src="./static/image/banner_corner.png"/>
         <img style="position: absolute; left: 0px; bottom: 0px;
             -webkit-transform:rotate(-90deg);
@@ -154,38 +154,15 @@
     
     <!-- 飞鹤 -->
     <script src="http://zhengxiaoyao0716.github.io/OwO/js/owo.js"></script>
+    <script src="http://zhengxiaoyao0716.github.io/OwO/js/template/feihe.js"></script>
     <script>
-        OwO.locale.chinese();
-        
-        OwO.info = {
-            "name": "飞鹤",
-            "gender": "Boy",
-            "birth": "2016/3/6",
-            "master": "正逍遥0716",
-            "home": {"name": "逍遥居", "link": "http://xiaoyao.zheng0716.com"}
-        };
         OwO.config.image = "./static/image/feihe.png";
-        OwO.config.cursor = "simple";
-        OwO.config.parent = document.getElementsByClassName("petRoom")[0];
-        OwO.config.position = "absolute";
-        OwO.config.coord = [1, 0.9, 1];
-        OwO.config.axis = [1, 1];
-        
-        OwO.anim.config.type = 1;
         var frameArray = [];
         var imgNum;
         for (imgNum = 1; imgNum < 30; imgNum++) {
             frameArray.push("http://os.zheng0716.com/static/image/OwO/feihe/" + imgNum + ".png");
         }
-        OwO.anim.config.queue = [
-            {"frames": frameArray, "delay": 1, "repeat": 8, "offset": [-8, -1.5, -0.3]}
-        ]
-        
-        OwO.menu.config.coord = [0.5, 1];
-        OwO.menu.config.axis = [0.5, 0];
-        
-        OwO.chat.config.defaultWords = ["爱冷剑，怜悲箫，月下狼孤啸；<br />轻点画，慢勾描，云中人逍遥。"];
-        
+        OwO.anim.config.queue[0].frames = frameArray;
         setTimeout(OwO.init, 100);
     </script>
     
