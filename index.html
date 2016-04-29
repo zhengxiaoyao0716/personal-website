@@ -152,38 +152,41 @@
         </div>
     </div>
     
-    <!-- 宠物 -->
-    <script src="http://zhengxiaoyao0716.github.io/OwOpet/js/owopet.js"></script>
+    <!-- 飞鹤 -->
+    <script src="http://zhengxiaoyao0716.github.io/OwO/js/owo.js"></script>
     <script>
-        OwOpet.locale.chinese();
+        OwO.locale.chinese();
         
-        OwOpet.info = {
-            "name": "OwO",
+        OwO.info = {
+            "name": "飞鹤",
             "gender": "Boy",
             "birth": "2016/3/6",
-            "master": "zhengxiaoya0716",
-            "home": "http://xiaoyao.zheng0716.com"
+            "master": "正逍遥0716",
+            "home": {"name": "逍遥居", "link": "http://xiaoyao.zheng0716.com"}
         };
-        OwOpet.config.image = "./static/image/feihe.png";
-        OwOpet.config.cursor = "simple";
-        OwOpet.config.parent = document.getElementsByClassName("petRoom")[0];
-        OwOpet.config.position = "absolute";
-        OwOpet.config.coord = [1, 0.9, 1];
-        OwOpet.config.axis = [1, 1];
+        OwO.config.image = "./static/image/feihe.png";
+        OwO.config.cursor = "simple";
+        OwO.config.parent = document.getElementsByClassName("petRoom")[0];
+        OwO.config.position = "absolute";
+        OwO.config.coord = [1, 0.9, 1];
+        OwO.config.axis = [1, 1];
         
-        OwOpet.anim.config.type = 1;
+        OwO.anim.config.type = 1;
         var frameArray = [];
         var imgNum;
         for (imgNum = 1; imgNum < 30; imgNum++) {
-            frameArray.push("http://os.zheng0716.com/static/image/OwOpet/feihe/" + imgNum + ".png");
+            frameArray.push("http://os.zheng0716.com/static/image/OwO/feihe/" + imgNum + ".png");
         }
-        OwOpet.anim.config.queue = [
+        OwO.anim.config.queue = [
             {"frames": frameArray, "delay": 1, "repeat": 8, "offset": [-8, -1.5, -0.3]}
         ]
         
-        OwOpet.chat.config.defaultWords = ["爱冷剑，怜悲箫，月下狼孤啸；<br />轻点画，慢勾描，云中人逍遥。"];
+        OwO.menu.config.coord = [0.5, 1];
+        OwO.menu.config.axis = [0.5, 0];
         
-        setTimeout(OwOpet.init, 100);
+        OwO.chat.config.defaultWords = ["爱冷剑，怜悲箫，月下狼孤啸；<br />轻点画，慢勾描，云中人逍遥。"];
+        
+        setTimeout(OwO.init, 100);
     </script>
     
 </body>
