@@ -155,15 +155,23 @@
     <!-- 飞鹤 -->
     <script src="http://zhengxiaoyao0716.github.io/OwO/js/owo.js"></script>
     <script src="http://zhengxiaoyao0716.github.io/OwO/js/template/feihe.js"></script>
+    <style>
+        .owo-menu div {
+            box-sizing: content-box;
+        }
+    </style>
     <script>
         OwO.config.image = "./static/image/feihe.png";
+        
         var frameArray = [];
         var imgNum;
         for (imgNum = 1; imgNum < 30; imgNum++) {
             frameArray.push("http://os.zheng0716.com/static/image/OwO/feihe/" + imgNum + ".png");
         }
         OwO.anim.config.queue[0].frames = frameArray;
+        
+        OwO.menu.config.class = "owo-menu";
+        
         setTimeout(OwO.init, 100);
     </script>
-    
 </body>
