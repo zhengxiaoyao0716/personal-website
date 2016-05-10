@@ -1,4 +1,4 @@
-var readJson = (function () {    
+var readProjects = (function () {    
     /** 解析 */
     function parse(page, items) {
         page *= 6;
@@ -21,7 +21,6 @@ var readJson = (function () {
         if (!jsonItems) {
             $('#waiting').modal('show');
             $.getJSON("http://public.zheng0716.com/static/json/projects.json", function(json) {
-                console.log(json);
                 jsonItems = json;
                 $('#waiting').modal('hide');
                 

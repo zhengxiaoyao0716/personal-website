@@ -43,7 +43,7 @@ function sanJieZhi() {
 }
 function projectGallery() {
     preChange("#projectGallery");
-    readJson(initPagination);
+    readProjects(initPagination);
 }
 $(document).ready(function() {
     window.preChange = function (id) {
