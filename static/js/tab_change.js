@@ -12,8 +12,8 @@ function mainSites() {
         </a>\
         </div>\
         <div class="col-sm-4">\
-        <a class="thumbnail" href="http://blog.csdn.net/zhengxiaoyao0716" target="_blank">\
-            <img src="./static/image/csdn.jpg" class="img-responsive" />\
+        <a class="thumbnail" href="http://www.cnblogs.com/zhengxiaoyao0716/" target="_blank">\
+            <img src="./static/image/cnblogs.jpg" class="img-responsive" />\
             <div class="caption">\
             <h3 align="center">\
                 技术文章\
